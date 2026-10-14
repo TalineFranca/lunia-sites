@@ -6,55 +6,25 @@ interface LogoProps {
   tone?: "dark" | "light";
 }
 
-/** Lua crescente + "lunia sites" em minúsculo. */
+/** "lunia sites" em minúsculo, com o quadradinho amarelo no lugar do ponto. */
 export function Logo({ className, tone = "dark" }: LogoProps) {
-  const text = tone === "dark" ? "#1E1B2E" : "#F5F1EA";
-  const moon = tone === "dark" ? "#4B3BB0" : "#D9D1F7";
-
   return (
-    <svg
-      viewBox="0 0 172 40"
-      className={cn("h-9 w-auto", className)}
+    <span
       role="img"
       aria-label="Lunia Sites"
+      className={cn(
+        "inline-flex items-baseline font-sans text-2xl leading-none tracking-[-0.02em]",
+        tone === "dark" ? "text-ink" : "text-cream",
+        className,
+      )}
     >
-      <MoonMark color={moon} />
-      <text
-        x="44"
-        y="27"
-        fill={text}
-        fontFamily="Fraunces, Georgia, serif"
-        fontSize="24"
-        fontStyle="italic"
-        fontWeight="500"
-        letterSpacing="-0.5"
-      >
+      <span aria-hidden="true" className="font-extrabold">
         lunia
-      </text>
-      <text
-        x="105"
-        y="27"
-        fill={text}
-        fontFamily="Manrope, system-ui, sans-serif"
-        fontSize="17"
-        fontWeight="500"
-        letterSpacing="0.5"
-      >
+      </span>
+      <span aria-hidden="true" className="ml-[0.25em] font-normal">
         sites
-      </text>
-    </svg>
-  );
-}
-
-/** Apenas o símbolo da lua, num quadro de 40x40. */
-export function MoonMark({ color = "#4B3BB0" }: { color?: string }) {
-  return (
-    <g>
-      <path
-        d="M24.5 5.2A15 15 0 1 0 35 27.4 12 12 0 0 1 24.5 5.2Z"
-        fill={color}
-      />
-      <circle cx="33" cy="9" r="2.2" fill="#F3D98B" />
-    </g>
+      </span>
+      <span aria-hidden="true" className="ml-[0.08em] inline-block h-[0.2em] w-[0.24em] bg-[#FFC83D]" />
+    </span>
   );
 }

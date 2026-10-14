@@ -10,7 +10,7 @@ export function Footer() {
       <div className="container">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <Logo className="h-10" />
+            <Logo className="text-3xl" />
             <p className="mt-5 max-w-xs text-ink/70">
               Sites e landing pages feitos com cuidado para negócios que querem conquistar o próprio espaço na internet.
             </p>

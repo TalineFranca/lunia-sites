@@ -28,7 +28,7 @@ export function Header() {
     >
       <div className="container flex h-16 items-center justify-between md:h-20">
         <a href="#inicio" aria-label="Lunia Sites, voltar ao início" onClick={() => setOpen(false)}>
-          <Logo className="h-8 md:h-9" />
+          <Logo className="text-[1.4rem] md:text-[1.6rem]" />
         </a>
 
         <nav aria-label="Principal" className="hidden md:block">
