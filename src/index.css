@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 38 35% 94%;
+    --foreground: 249 26% 14%;
+    --card: 38 35% 96%;
+    --card-foreground: 249 26% 14%;
+    --primary: 248 50% 46%;
+    --primary-foreground: 38 35% 96%;
+    --secondary: 253 70% 89%;
+    --secondary-foreground: 249 26% 14%;
+    --muted: 38 25% 88%;
+    --muted-foreground: 249 12% 36%;
+    --accent: 45 81% 75%;
+    --accent-foreground: 249 26% 14%;
+    --destructive: 356 57% 45%;
+    --destructive-foreground: 38 35% 96%;
+    --border: 249 15% 78%;
+    --input: 249 15% 70%;
+    --ring: 248 50% 46%;
+    --radius: 1rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+    font-feature-settings: "ss01";
+    /* Textura de papel bem sutil */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.1 0 0 0 0 0.18 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+    font-optical-sizing: auto;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    @apply bg-lavender text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-iris ring-offset-2 ring-offset-cream;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-sans text-xs font-semibold uppercase tracking-[0.18em] text-ink/70;
+  }
+}
