@@ -10,8 +10,6 @@ export const site = {
   founder: {
     name: "Taline",
     role: "Fundadora e desenvolvedora",
-    /** Coloque a foto em public/ (ex.: public/taline.jpg) e escreva "/taline.jpg" aqui */
-    photo: "",
   },
 } as const;
 
