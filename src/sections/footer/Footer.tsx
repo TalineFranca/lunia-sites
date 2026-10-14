@@ -1,6 +1,6 @@
 import { Logo } from "@/components/Logo";
 import { navLinks, site } from "@/data/site";
-import { whatsappLink } from "@/lib/contact";
+import { emailHref, openEmail, whatsappLink } from "@/lib/contact";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -38,7 +38,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`mailto:${site.email}`} className="break-all hover:text-iris hover:underline">
+                <a href={emailHref} onClick={openEmail} className="break-all hover:text-iris hover:underline">
                   {site.email}
                 </a>
               </li>

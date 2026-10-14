@@ -5,7 +5,7 @@ import { Reveal } from "@/components/Reveal";
 import { DashedCircle } from "@/components/Doodles";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { site } from "@/data/site";
-import { whatsappLink } from "@/lib/contact";
+import { emailHref, openEmail, whatsappLink } from "@/lib/contact";
 
 export function Contact() {
   return (
@@ -46,7 +46,8 @@ export function Contact() {
           </a>
 
           <a
-            href={`mailto:${site.email}`}
+            href={emailHref}
+            onClick={openEmail}
             className="group flex items-center justify-between gap-4 rounded-[1.5rem] border border-cream/25 px-6 py-5 transition-colors hover:border-cream/60"
           >
             <span className="flex min-w-0 items-center gap-4">
