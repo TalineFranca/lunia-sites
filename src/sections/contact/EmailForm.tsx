@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { site } from "@/data/site";
 import { gmailComposeLink, mailtoLink } from "@/lib/contact";
 
 const fieldClass =
@@ -84,28 +83,15 @@ export function EmailForm() {
           className={fieldClass}
         />
       </div>
-      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-        <Button type="submit" name="via" value="gmail" variant="light">
+      <div className="flex flex-col gap-3 sm:flex-row">
+        <Button type="submit" name="via" value="gmail" variant="light" className="sm:flex-1">
           Enviar pelo Gmail
           <span className="sr-only"> (abre em nova aba)</span>
         </Button>
-        <Button
-          type="submit"
-          name="via"
-          value="app"
-          variant="outline"
-          className="border-cream/40 text-cream hover:bg-cream hover:text-ink"
-        >
-          Usar outro app de e-mail
+        <Button type="submit" name="via" value="app" variant="light" className="sm:flex-1">
+          Outro app de e-mail
         </Button>
       </div>
-      <p className="text-sm text-cream/65">
-        A mensagem abre já preenchida, é só conferir e enviar. Se nada abrir, escreva direto para{" "}
-        <a href={`mailto:${site.email}`} className="text-cream underline underline-offset-4">
-          {site.email}
-        </a>
-        .
-      </p>
     </form>
   );
 }
