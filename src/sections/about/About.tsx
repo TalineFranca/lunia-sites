@@ -35,7 +35,7 @@ export function About() {
               visitas em conversas.
             </p>
             <p>
-              Por trás da Lunia está a Taline, fundadora, que está concluindo a graduação em Análise e
+              Por trás da Lunia está Taline Rodrigues, fundadora, que está concluindo a graduação em Análise e
               Desenvolvimento de Sistemas. Cada projeto é acompanhado de perto, do primeiro “oi” até
               o site no ar.
             </p>

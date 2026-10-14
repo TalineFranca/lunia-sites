@@ -8,7 +8,7 @@ export const site = {
   instagram: "luniasites",
   instagramUrl: "https://instagram.com/luniasites",
   founder: {
-    name: "Taline",
+    name: "Taline Rodrigues",
     role: "Fundadora e desenvolvedora",
   },
 } as const;
