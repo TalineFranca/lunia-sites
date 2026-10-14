@@ -9,8 +9,9 @@ const fieldClass =
   "border-cream/30 bg-cream/5 text-cream placeholder:text-cream/45 focus-visible:border-butter focus-visible:ring-butter";
 
 /**
- * Formulário que abre o e-mail com a mensagem já preenchida: pelo Gmail no navegador
- * ou pelo aplicativo de e-mail do aparelho (mailto, que só funciona se houver um configurado).
+ * Formulário que abre o e-mail com a mensagem já preenchida.
+ * No celular usa o app de e-mail (mailto); no computador, onde muitas vezes
+ * não há app configurado, abre o Gmail no navegador.
  */
 export function EmailForm() {
   const [name, setName] = useState("");
@@ -33,8 +34,8 @@ export function EmailForm() {
       .filter((line, i, all) => line !== "" || all[i - 1] !== "")
       .join("\r\n");
 
-    const via = ((e.nativeEvent as SubmitEvent).submitter as HTMLButtonElement | null)?.value;
-    if (via === "app") {
+    const isMobile = window.matchMedia("(pointer: coarse)").matches;
+    if (isMobile) {
       window.location.href = mailtoLink({ subject, body });
     } else {
       window.open(gmailComposeLink({ subject, body }), "_blank", "noopener,noreferrer");
@@ -83,15 +84,9 @@ export function EmailForm() {
           className={fieldClass}
         />
       </div>
-      <div className="flex flex-col gap-3 sm:flex-row">
-        <Button type="submit" name="via" value="gmail" variant="light" className="sm:flex-1">
-          Enviar pelo Gmail
-          <span className="sr-only"> (abre em nova aba)</span>
-        </Button>
-        <Button type="submit" name="via" value="app" variant="light" className="sm:flex-1">
-          Outro app de e-mail
-        </Button>
-      </div>
+      <Button type="submit" variant="light">
+        Enviar mensagem
+      </Button>
     </form>
   );
 }
