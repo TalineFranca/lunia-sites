@@ -27,10 +27,6 @@ Sem o `.env`, o site funciona normalmente e a seção de avaliações mostra um 
 
 > Como a inserção é pública, qualquer visitante pode enviar uma avaliação. Para apagar alguma, use o **Table Editor** do Supabase.
 
-## Formulário de contato (Web3Forms)
-
-O formulário da seção Contato envia as mensagens direto para o e-mail cadastrado no [Web3Forms](https://web3forms.com). Coloque a chave do formulário no `.env` como `VITE_WEB3FORMS_KEY`. Sem a chave, o botão abre o e-mail do visitante já preenchido.
-
 ## Onde editar o conteúdo
 
 | O quê | Arquivo |
