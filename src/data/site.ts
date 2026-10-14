@@ -3,7 +3,7 @@ export const site = {
   whatsappNumber: "5569992677015",
   whatsappDisplay: "(69) 99267-7015",
   whatsappMessage:
-    "Olá, Lunia! Vim pelo site e gostaria de conversar sobre um site para o meu negócio.",
+    "Olá, Taline! Vim pelo site e gostaria de conversar sobre um site para o meu negócio.",
   email: "luniasites@gmail.com",
   instagram: "luniasites",
   instagramUrl: "https://instagram.com/luniasites",

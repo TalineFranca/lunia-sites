@@ -13,7 +13,7 @@ export function WhatsAppFloat() {
           href={whatsappLink()}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Conversar com a Lunia no WhatsApp (abre em nova aba)"
+          aria-label="Conversar com a Taline no WhatsApp (abre em nova aba)"
           initial={{ opacity: 0, scale: 0.8, y: 12 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 12 }}
