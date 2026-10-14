@@ -36,8 +36,8 @@ export function About() {
             </p>
             <p>
               Por trás da Lunia está a Taline, fundadora, que está concluindo a graduação em Análise e
-              Desenvolvimento de Sistemas. Cada projeto é acompanhado de perto, do primeiro “oi” no
-              WhatsApp até o site no ar.
+              Desenvolvimento de Sistemas. Cada projeto é acompanhado de perto, do primeiro “oi” até
+              o site no ar.
             </p>
           </Reveal>
 
