@@ -18,7 +18,7 @@ export function Contact() {
         <div>
           <SectionHeading
             id="contato"
-            index="06"
+            index="05"
             label="Contato"
             tone="light"
             title={

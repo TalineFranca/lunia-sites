@@ -56,8 +56,8 @@ export function Hero() {
               </a>
             </Button>
             <Button asChild variant="link" className="self-start sm:self-auto">
-              <a href="#projetos">
-                Ver projetos <ArrowDown className="h-4 w-4" />
+              <a href="#servicos">
+                Ver serviços <ArrowDown className="h-4 w-4" />
               </a>
             </Button>
           </motion.div>

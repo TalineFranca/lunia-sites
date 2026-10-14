@@ -6,7 +6,8 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { Hero } from "@/sections/hero/Hero";
 import { About } from "@/sections/about/About";
 import { Services } from "@/sections/services/Services";
-import { Projects } from "@/sections/projects/Projects";
+// Projetos escondidos até ter clientes. Para voltar: descomente as 2 linhas e o link em data/site.ts.
+// import { Projects } from "@/sections/projects/Projects";
 import { Technologies } from "@/sections/technologies/Technologies";
 import { Reviews } from "@/sections/reviews/Reviews";
 import { Contact } from "@/sections/contact/Contact";
@@ -27,7 +28,7 @@ export default function App() {
           <Hero />
           <About />
           <Services />
-          <Projects />
+          {/* <Projects /> */}
           <Technologies />
           <Reviews />
           <Contact />

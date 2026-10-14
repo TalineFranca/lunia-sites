@@ -15,7 +15,7 @@ export function Reviews() {
       <div className="container">
         <SectionHeading
           id="avaliacoes"
-          index="05"
+          index="04"
           label="Avaliações"
           title={
             <>
