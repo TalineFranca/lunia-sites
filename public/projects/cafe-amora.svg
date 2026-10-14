@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#EADCCB"/>
+  <circle cx="660" cy="120" r="180" fill="#E0CBB4"/>
+  <rect x="80" y="70" width="640" height="460" rx="22" fill="#FBF6EE"/>
+  <rect x="80" y="70" width="640" height="40" rx="22" fill="#6E2A3C"/>
+  <rect x="80" y="92" width="640" height="18" fill="#6E2A3C"/>
+  <circle cx="108" cy="90" r="5" fill="#F3D98B"/><circle cx="126" cy="90" r="5" fill="#FBF6EE" opacity=".6"/><circle cx="144" cy="90" r="5" fill="#FBF6EE" opacity=".6"/>
+  <text x="120" y="190" font-family="Georgia, serif" font-style="italic" font-size="54" fill="#6E2A3C">Café Amora</text>
+  <rect x="120" y="215" width="250" height="10" rx="5" fill="#6E2A3C" opacity=".25"/>
+  <rect x="120" y="237" width="200" height="10" rx="5" fill="#6E2A3C" opacity=".25"/>
+  <rect x="120" y="280" width="150" height="44" rx="22" fill="#6E2A3C"/>
+  <circle cx="560" cy="270" r="110" fill="#C98A8F"/>
+  <circle cx="560" cy="270" r="70" fill="#6E2A3C"/>
+  <ellipse cx="560" cy="262" rx="46" ry="16" fill="#A4545F"/>
+  <g fill="#6E2A3C" opacity=".12"><rect x="120" y="380" width="170" height="110" rx="14"/><rect x="315" y="380" width="170" height="110" rx="14"/><rect x="510" y="380" width="170" height="110" rx="14"/></g>
+</svg>
