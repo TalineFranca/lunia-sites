@@ -3,12 +3,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { mailtoLink } from "@/lib/contact";
+import { site } from "@/data/site";
+import { gmailComposeLink, mailtoLink } from "@/lib/contact";
 
 const fieldClass =
   "border-cream/30 bg-cream/5 text-cream placeholder:text-cream/45 focus-visible:border-butter focus-visible:ring-butter";
 
-/** Formulário que abre o aplicativo de e-mail com a mensagem já preenchida. */
+/**
+ * Formulário que abre o e-mail com a mensagem já preenchida: pelo Gmail no navegador
+ * ou pelo aplicativo de e-mail do aparelho (mailto, que só funciona se houver um configurado).
+ */
 export function EmailForm() {
   const [name, setName] = useState("");
   const [business, setBusiness] = useState("");
@@ -30,7 +34,12 @@ export function EmailForm() {
       .filter((line, i, all) => line !== "" || all[i - 1] !== "")
       .join("\r\n");
 
-    window.location.href = mailtoLink({ subject, body });
+    const via = ((e.nativeEvent as SubmitEvent).submitter as HTMLButtonElement | null)?.value;
+    if (via === "app") {
+      window.location.href = mailtoLink({ subject, body });
+    } else {
+      window.open(gmailComposeLink({ subject, body }), "_blank", "noopener,noreferrer");
+    }
   }
 
   return (
@@ -75,12 +84,28 @@ export function EmailForm() {
           className={fieldClass}
         />
       </div>
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
-        <Button type="submit" variant="light">
-          Abrir no meu e-mail
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+        <Button type="submit" name="via" value="gmail" variant="light">
+          Enviar pelo Gmail
+          <span className="sr-only"> (abre em nova aba)</span>
         </Button>
-        <p className="text-sm text-cream/65">Seu aplicativo de e-mail vai abrir com tudo preenchido.</p>
+        <Button
+          type="submit"
+          name="via"
+          value="app"
+          variant="outline"
+          className="border-cream/40 text-cream hover:bg-cream hover:text-ink"
+        >
+          Usar outro app de e-mail
+        </Button>
       </div>
+      <p className="text-sm text-cream/65">
+        A mensagem abre já preenchida, é só conferir e enviar. Se nada abrir, escreva direto para{" "}
+        <a href={`mailto:${site.email}`} className="text-cream underline underline-offset-4">
+          {site.email}
+        </a>
+        .
+      </p>
     </form>
   );
 }
