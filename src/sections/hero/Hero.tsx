@@ -1,13 +1,23 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Highlight } from "@/components/Highlight";
+import { RichTitleText } from "@/components/RichTitleText";
 import { HandArrow } from "@/components/Doodles";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
+import { hero } from "@/data/hero";
 import { whatsappLink } from "@/lib/contact";
 import { MoonStage } from "./MoonStage";
 
 const ease = [0.22, 1, 0.36, 1] as const;
+
+function CheckMark() {
+  return (
+    <svg viewBox="0 0 20 20" className="h-5 w-5 shrink-0" aria-hidden="true">
+      <circle cx="10" cy="10" r="9" fill="#F3D98B" />
+      <path d="M6 10.4l2.6 2.6L14 7.6" fill="none" stroke="#1E1B2E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
 
 export function Hero() {
   return (
@@ -20,17 +30,17 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease }}
           >
-            Sites e landing pages para negócios
+            {hero.eyebrow}
           </motion.p>
 
           <motion.h1
             id="hero-title"
-            className="mt-6 text-[2.75rem] font-light leading-[1.02] text-ink sm:text-6xl lg:text-[5.25rem]"
+            className="mt-6 text-[2.6rem] font-light leading-[1.04] text-ink sm:text-6xl lg:text-[4.6rem]"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.1, ease }}
           >
-            Seu negócio merece um <Highlight>espaço só seu</Highlight> na internet.
+            <RichTitleText title={hero.title} />
           </motion.h1>
 
           <motion.p
@@ -39,8 +49,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25, ease }}
           >
-            A Lunia cria sites e landing pages bonitos, rápidos e pensados para o celular, para que seus
-            clientes encontrem você, confiem no seu trabalho e chamem no WhatsApp.
+            {hero.description}
           </motion.p>
 
           <motion.div
@@ -52,15 +61,30 @@ export function Hero() {
             <Button asChild size="lg">
               <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon />
-                Conversar no WhatsApp
+                {hero.ctaLabel}
               </a>
             </Button>
             <Button asChild variant="link" className="self-start sm:self-auto">
-              <a href="#servicos">
-                Ver serviços <ArrowDown className="h-4 w-4" />
+              <a href={hero.secondaryLink.href}>
+                {hero.secondaryLink.label} <ArrowDown className="h-4 w-4" />
               </a>
             </Button>
           </motion.div>
+
+          <motion.ul
+            aria-label="Garantias"
+            className="mt-9 flex flex-col gap-3 text-sm font-semibold text-ink/80 sm:flex-row sm:flex-wrap sm:gap-x-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.55, ease }}
+          >
+            {hero.guarantees.map((item) => (
+              <li key={item} className="flex items-center gap-2">
+                <CheckMark />
+                {item}
+              </li>
+            ))}
+          </motion.ul>
         </div>
 
         <motion.div
@@ -72,7 +96,7 @@ export function Hero() {
         >
           <MoonStage />
           <p className="absolute -bottom-6 left-2 flex items-end gap-1 font-hand text-2xl text-iris md:-bottom-2 md:-left-6">
-            feito à mão, sem pressa
+            {hero.note}
             <HandArrow className="mb-3 h-10 w-12 -scale-y-100 text-iris" />
           </p>
         </motion.div>
