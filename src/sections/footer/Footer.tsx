@@ -11,9 +11,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Logo className="text-3xl" />
-            <p className="mt-5 max-w-xs text-ink/70">
-              Sites e landing pages feitos com cuidado para negócios que querem conquistar o próprio espaço na internet.
-            </p>
+            <p className="mt-5 max-w-xs text-ink/70">{site.tagline}</p>
           </div>
 
           <nav aria-label="Rodapé">
@@ -54,7 +52,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col gap-2 border-t border-dashed border-ink/25 pt-6 text-sm text-ink/60 sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} Lunia Sites. Todos os direitos reservados.</p>
-          <p className="font-hand text-lg text-iris">feito com calma, debaixo da lua.</p>
+          <p className="font-hand text-lg text-iris">{site.footerNote}</p>
         </div>
       </div>
     </footer>

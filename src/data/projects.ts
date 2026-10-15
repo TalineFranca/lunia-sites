@@ -1,4 +1,14 @@
-import type { Project } from "@/types/content";
+import type { Project, SectionCopy } from "@/types/content";
+
+export const projectsCopy: SectionCopy = {
+  index: "04",
+  label: "Projetos",
+  title: { start: "Projetos", highlight: "demonstrativos" },
+  intro: "Sites desenvolvidos para explorar novas tecnologias.",
+};
+
+/** Texto da etiqueta exibida em cada card */
+export const projectTag = "Projeto demonstrativo";
 
 /**
  * Projetos exibidos na seção "Projetos demonstrativos".

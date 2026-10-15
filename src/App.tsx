@@ -4,12 +4,8 @@ import { queryClient } from "@/lib/queryClient";
 import { Header } from "@/components/Header";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { Hero } from "@/sections/hero/Hero";
-import { About } from "@/sections/about/About";
-import { Services } from "@/sections/services/Services";
 import { Projects } from "@/sections/projects/Projects";
-import { Technologies } from "@/sections/technologies/Technologies";
 import { Reviews } from "@/sections/reviews/Reviews";
-import { Contact } from "@/sections/contact/Contact";
 import { Footer } from "@/sections/footer/Footer";
 
 export default function App() {
@@ -25,12 +21,8 @@ export default function App() {
         <Header />
         <main id="conteudo">
           <Hero />
-          <About />
-          <Services />
           <Projects />
-          <Technologies />
           <Reviews />
-          <Contact />
         </main>
         <Footer />
         <WhatsAppFloat />

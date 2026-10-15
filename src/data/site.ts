@@ -7,6 +7,11 @@ export const site = {
   email: "luniasites@gmail.com",
   instagram: "luniasites",
   instagramUrl: "https://instagram.com/luniasites",
+  /** Frase curta do rodapé */
+  tagline:
+    "Landing pages e sites institucionais feitos com cuidado para negócios que querem ser encontrados.",
+  /** Anotação escrita à mão no fim do rodapé */
+  footerNote: "feito com calma, debaixo da lua.",
 } as const;
 
 export const navLinks = [

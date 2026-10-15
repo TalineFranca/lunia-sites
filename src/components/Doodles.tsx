@@ -47,3 +47,17 @@ export function Sparkle({ className }: { className?: string }) {
     </svg>
   );
 }
+
+/** Borda superior ondulada para seções com fundo colorido (a cor é a da seção de cima). */
+export function WaveTop({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      className={cn("pointer-events-none absolute -top-px left-0 h-8 w-full text-cream md:h-12", className)}
+      viewBox="0 0 1440 48"
+      preserveAspectRatio="none"
+    >
+      <path d="M0 0h1440v18c-240 30-480 30-720 12S240 0 0 24V0Z" fill="currentColor" />
+    </svg>
+  );
+}

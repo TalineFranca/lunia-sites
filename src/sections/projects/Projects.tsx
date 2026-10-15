@@ -1,7 +1,6 @@
 import { SectionHeading } from "@/components/SectionHeading";
-import { Highlight } from "@/components/Highlight";
 import { Reveal } from "@/components/Reveal";
-import { projects } from "@/data/projects";
+import { projects, projectsCopy } from "@/data/projects";
 import { cn } from "@/lib/utils";
 import { ProjectCard } from "./ProjectCard";
 
@@ -9,17 +8,7 @@ export function Projects() {
   return (
     <section aria-labelledby="projetos" className="py-24 md:py-36">
       <div className="container">
-        <SectionHeading
-          id="projetos"
-          index="03"
-          label="Projetos"
-          title={
-            <>
-              Projetos <Highlight>demonstrativos</Highlight>
-            </>
-          }
-          intro="Sites desenvolvidos para explorar novas tecnologias."
-        />
+        <SectionHeading id="projetos" copy={projectsCopy} />
 
         <ul className="mt-16 grid gap-16 md:mt-20 md:grid-cols-2 md:gap-12 lg:gap-20">
           {projects.map((project, i) => (
