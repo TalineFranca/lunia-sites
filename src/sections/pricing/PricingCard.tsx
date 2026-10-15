@@ -31,8 +31,8 @@ export function PricingCard({ plan, dark = false }: PricingCardProps) {
       </div>
 
       <p className="mt-6">
-        {plan.pricePrefix && <span className={cn("block text-sm", muted)}>{plan.pricePrefix}</span>}
-        <span className="font-display text-4xl font-light md:text-5xl">
+        {plan.pricePrefix && <span className={cn("mb-3 block text-sm", muted)}>{plan.pricePrefix}</span>}
+        <span className="font-display text-4xl font-light leading-tight md:text-5xl">
           <WithPlaceholders text={plan.price} />
         </span>
         {plan.priceSuffix && <span className={cn("ml-1 text-lg", muted)}>{plan.priceSuffix}</span>}
