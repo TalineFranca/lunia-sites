@@ -28,13 +28,12 @@ export function About() {
           <Reveal delay={0.1} className="max-w-xl space-y-5 text-lg leading-relaxed text-ink/80">
             <p>
               A Lunia nasceu de uma vontade simples: ajudar negócios a conquistarem seu próprio espaço na
-              internet. Um lugar que não depende de algoritmo, que mostra quem você é e que transforma
-              visitas em conversas.
+              internet. Um site com a cara do seu negócio, que apresenta o seu trabalho com clareza e
+              leva novos clientes até você.
             </p>
             <p>
-              Cada site é feito sob medida, unindo um visual cuidadoso com tecnologia atual: rápido,
-              pensado para o celular e fácil de encontrar. E cada projeto é acompanhado de perto, do
-              primeiro “oi” até o site no ar.
+              Cada projeto une um visual cuidadoso a tecnologia atual, rápido e pensado para o celular,
+              e é acompanhado de perto, do primeiro “oi” até o site no ar.
             </p>
           </Reveal>
 
