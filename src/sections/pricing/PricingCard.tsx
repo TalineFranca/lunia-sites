@@ -58,16 +58,18 @@ export function PricingCard({ plan, dark = false }: PricingCardProps) {
         ))}
       </ul>
 
-      <dl className={cn("mt-8 space-y-2 border-t border-dashed pt-5 text-sm", dark ? "border-cream/25" : "border-ink/25")}>
-        {plan.details.map((detail) => (
-          <div key={detail.label} className="flex items-baseline justify-between gap-4">
-            <dt className={muted}>{detail.label}</dt>
-            <dd className="text-right font-semibold">
-              <WithPlaceholders text={detail.value} />
-            </dd>
-          </div>
-        ))}
-      </dl>
+      {plan.details.length > 0 && (
+        <dl className={cn("mt-8 space-y-2 border-t border-dashed pt-5 text-sm", dark ? "border-cream/25" : "border-ink/25")}>
+          {plan.details.map((detail) => (
+            <div key={detail.label} className="flex items-baseline justify-between gap-4">
+              <dt className={muted}>{detail.label}</dt>
+              <dd className="text-right font-semibold">
+                <WithPlaceholders text={detail.value} />
+              </dd>
+            </div>
+          ))}
+        </dl>
+      )}
 
       <div className="mt-auto pt-8">
         <Button asChild variant={dark ? "light" : "outline"} className="w-full">

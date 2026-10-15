@@ -47,7 +47,7 @@ Todos os textos ficam em `src/data/`, um arquivo por seção, na ordem em que ap
 | Chamada final | `src/data/finalCta.ts` |
 | Título, descrição e Open Graph | `index.html` |
 
-**Preços e prazos:** os valores ainda não definidos estão como `[PREÇO]` e `[PRAZO]` em `pricing.ts` e `faq.ts`. Enquanto estiverem entre colchetes, aparecem destacados em amarelo no site. Para encontrar todos, busque por `[PRE` e `[PRAZO]` na pasta `src/data/`.
+**Preços e prazos:** ficam em `pricing.ts` (cards de preço) e `faq.ts` (resposta sobre prazos). Se algum valor ainda não estiver definido, escreva entre colchetes, como `[PREÇO]` ou `[PRAZO]`: ele aparece destacado em amarelo no site até ser preenchido.
 
 **Títulos com destaque:** os títulos são escritos como `{ start, highlight, end }`. A parte em `highlight` aparece em itálico roxo, com o traço amarelo embaixo.
 

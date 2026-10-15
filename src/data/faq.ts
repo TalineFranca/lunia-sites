@@ -7,12 +7,11 @@ export const faqCopy: SectionCopy = {
   intro: "Reunimos as perguntas que mais aparecem. Se a sua não estiver aqui, é só chamar no WhatsApp.",
 };
 
-/** [PRAZO] aparece destacado no site até ser trocado pelo valor real. */
 export const faqItems: FaqItem[] = [
   {
     question: "Quanto tempo leva para o site ficar pronto?",
     answer:
-      "Uma landing page leva em média [PRAZO] e um site institucional, em média [PRAZO]. O prazo começa a contar quando recebemos os textos e as fotos e pode variar conforme o tamanho do projeto. Ele fica definido na proposta, antes de começar.",
+      "Uma landing page leva em média de 7 a 10 dias úteis e um site institucional, de 15 a 20 dias úteis. O prazo começa a contar quando recebemos os textos e as fotos e pode variar conforme o tamanho do projeto. Ele fica definido na proposta, antes de começar.",
   },
   {
     question: "Preciso ter os textos e as fotos?",

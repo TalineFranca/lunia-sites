@@ -1,9 +1,8 @@
 import type { PricingPlan, SectionCopy } from "@/types/content";
 
 /*
- * Troque [PREÇO] e [PRAZO] pelos valores reais, por exemplo:
- *   price: "R$ 900"   ·   value: "7 dias úteis"
- * Enquanto estiverem entre colchetes, eles aparecem destacados em amarelo no site.
+ * Valores ainda não definidos podem ser escritos entre colchetes, como [PREÇO] ou [PRAZO]:
+ * eles aparecem destacados em amarelo no site até serem preenchidos.
  */
 
 export const pricingCopy: SectionCopy = {
@@ -18,7 +17,7 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: "Landing page",
     pricePrefix: "a partir de",
-    price: "[PREÇO]",
+    price: "R$ 300",
     summary: "Uma página completa, focada em transformar visitas em contatos.",
     includes: [
       "Página única com seções planejadas para o seu objetivo",
@@ -30,7 +29,7 @@ export const pricingPlans: PricingPlan[] = [
     ],
     details: [
       { label: "Rodadas de ajuste", value: "2" },
-      { label: "Prazo médio de entrega", value: "[PRAZO]" },
+      { label: "Prazo médio de entrega", value: "7 a 10 dias úteis" },
     ],
     ctaLabel: "Quero uma landing page",
     whatsappMessage: "Olá, Taline! Vim pelo site e tenho interesse em uma landing page.",
@@ -38,10 +37,10 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: "Site institucional",
     pricePrefix: "a partir de",
-    price: "[PREÇO]",
+    price: "R$ 380",
     summary: "Várias páginas para apresentar o seu negócio por completo.",
     includes: [
-      "Páginas como Início, Sobre, Serviços e Contato",
+      "Até 5 páginas, como Início, Sobre, Serviços e Contato",
       "Design pensado para a sua marca",
       "Versão para celular",
       "Botão de WhatsApp e formulário de contato",
@@ -50,7 +49,7 @@ export const pricingPlans: PricingPlan[] = [
     ],
     details: [
       { label: "Rodadas de ajuste", value: "2" },
-      { label: "Prazo médio de entrega", value: "[PRAZO]" },
+      { label: "Prazo médio de entrega", value: "15 a 20 dias úteis" },
     ],
     ctaLabel: "Quero um site institucional",
     whatsappMessage: "Olá, Taline! Vim pelo site e tenho interesse em um site institucional.",
@@ -58,7 +57,7 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: "Manutenção mensal",
     tag: "Opcional",
-    price: "[PREÇO]",
+    price: "R$ 69",
     priceSuffix: "/mês",
     summary: "Para manter o site sempre atualizado, sem você precisar se preocupar.",
     includes: [
@@ -67,10 +66,7 @@ export const pricingPlans: PricingPlan[] = [
       "Atualizações técnicas do site",
       "Atendimento pelo WhatsApp",
     ],
-    details: [
-      { label: "Rodadas de ajuste por alteração", value: "2" },
-      { label: "Prazo médio para cada alteração", value: "[PRAZO]" },
-    ],
+    details: [],
     ctaLabel: "Quero a manutenção",
     whatsappMessage: "Olá, Taline! Vim pelo site e quero saber mais sobre a manutenção mensal.",
   },
