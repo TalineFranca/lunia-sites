@@ -29,13 +29,27 @@ Sem o `.env`, o site funciona normalmente e a seção de avaliações mostra um 
 
 ## Onde editar o conteúdo
 
-| O quê | Arquivo |
+Todos os textos ficam em `src/data/`, um arquivo por seção, na ordem em que aparecem na página:
+
+| Seção | Arquivo |
 | --- | --- |
-| WhatsApp, e-mail e Instagram | `src/data/site.ts` |
-| Projetos demonstrativos (imagem, nome, descrição, tecnologias, link) | `src/data/projects.ts` (imagens em `public/projetos/`) |
-| Tecnologias | `src/data/technologies.ts` |
-| Serviços | `src/data/services.ts` |
+| Contatos, menu e rodapé | `src/data/site.ts` |
+| Hero (título, botão e garantias) | `src/data/hero.ts` |
+| Por que ter um site | `src/data/why.ts` |
+| O que está incluso | `src/data/included.ts` |
+| Tipos de site | `src/data/siteTypes.ts` |
+| Projetos demonstrativos | `src/data/projects.ts` (imagens em `public/projetos/`) |
+| Como funciona | `src/data/process.ts` |
+| **Preços e prazos** | `src/data/pricing.ts` |
+| Formas de pagamento | `src/data/payment.ts` |
+| Avaliações | `src/data/reviews.ts` |
+| Perguntas frequentes | `src/data/faq.ts` |
+| Chamada final | `src/data/finalCta.ts` |
 | Título, descrição e Open Graph | `index.html` |
+
+**Preços e prazos:** os valores ainda não definidos estão como `[PREÇO]` e `[PRAZO]` em `pricing.ts` e `faq.ts`. Enquanto estiverem entre colchetes, aparecem destacados em amarelo no site. Para encontrar todos, busque por `[PRE` e `[PRAZO]` na pasta `src/data/`.
+
+**Títulos com destaque:** os títulos são escritos como `{ start, highlight, end }`. A parte em `highlight` aparece em itálico roxo, com o traço amarelo embaixo.
 
 **Imagem de compartilhamento:** `public/og-image.png` é gerada a partir de `public/og-image.svg`. Quando tiver o domínio, troque `/og-image.png` no `index.html` pelo endereço completo (ex.: `https://seudominio.com.br/og-image.png`).
 

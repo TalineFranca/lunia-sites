@@ -31,8 +31,8 @@ export function Header() {
           <Logo className="text-[1.4rem] md:text-[1.6rem]" />
         </a>
 
-        <nav aria-label="Principal" className="hidden md:block">
-          <ul className="flex items-center gap-8">
+        <nav aria-label="Principal" className="hidden lg:block">
+          <ul className="flex items-center gap-7">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
@@ -46,7 +46,7 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Button asChild size="sm" variant="outline">
             <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">
               Fazer orçamento
@@ -57,7 +57,7 @@ export function Header() {
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden"
+          className="lg:hidden"
           aria-expanded={open}
           aria-controls="menu-mobile"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
@@ -76,7 +76,7 @@ export function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden md:hidden"
+            className="overflow-hidden lg:hidden"
           >
             <ul className="container flex flex-col pb-6">
               {navLinks.map((link) => (
