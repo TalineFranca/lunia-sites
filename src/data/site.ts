@@ -15,6 +15,8 @@ export const site = {
 } as const;
 
 export const navLinks = [
+  { href: "#incluso", label: "Serviços" },
+  { href: "#tipos", label: "Landing page ou site" },
   { href: "#projetos", label: "Projetos" },
   { href: "#como-funciona", label: "Como funciona" },
   { href: "#precos", label: "Preços" },
