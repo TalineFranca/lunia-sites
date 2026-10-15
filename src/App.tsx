@@ -12,6 +12,7 @@ import { Process } from "@/sections/process/Process";
 import { Pricing } from "@/sections/pricing/Pricing";
 import { Payment } from "@/sections/payment/Payment";
 import { Reviews } from "@/sections/reviews/Reviews";
+import { Faq } from "@/sections/faq/Faq";
 import { Footer } from "@/sections/footer/Footer";
 
 export default function App() {
@@ -35,6 +36,7 @@ export default function App() {
           <Pricing />
           <Payment />
           <Reviews />
+          <Faq />
         </main>
         <Footer />
         <WhatsAppFloat />
