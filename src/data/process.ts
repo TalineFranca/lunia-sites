@@ -16,7 +16,7 @@ export const processSteps: TitledText[] = [
   {
     title: "Proposta e orçamento",
     description:
-      "Você recebe uma proposta com o que será feito, o valor, o prazo e as formas de pagamento. Sem surpresas.",
+      "Você recebe uma proposta com o que será feito, o valor, o prazo e a forma de pagamento. Sem surpresas.",
   },
   {
     title: "Criação com a sua aprovação",
