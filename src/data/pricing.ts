@@ -37,7 +37,7 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: "Site institucional",
     pricePrefix: "a partir de",
-    price: "R$ 380",
+    price: "R$ 400",
     summary: "Várias páginas para apresentar o seu negócio por completo.",
     includes: [
       "Até 5 páginas, como Início, Sobre, Serviços e Contato",
