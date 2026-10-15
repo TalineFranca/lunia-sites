@@ -31,7 +31,7 @@ Sem o `.env`, o site funciona normalmente e a seção de avaliações mostra um 
 
 | O quê | Arquivo |
 | --- | --- |
-| WhatsApp, e-mail, Instagram, nome da fundadora | `src/data/site.ts` |
+| WhatsApp, e-mail e Instagram | `src/data/site.ts` |
 | Projetos demonstrativos (imagem, nome, descrição, tecnologias, link) | `src/data/projects.ts` (imagens em `public/projetos/`) |
 | Tecnologias | `src/data/technologies.ts` |
 | Serviços | `src/data/services.ts` |

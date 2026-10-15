@@ -7,10 +7,6 @@ export const site = {
   email: "luniasites@gmail.com",
   instagram: "luniasites",
   instagramUrl: "https://instagram.com/luniasites",
-  founder: {
-    name: "Taline Rodrigues",
-    role: "Fundadora e desenvolvedora",
-  },
 } as const;
 
 export const navLinks = [
