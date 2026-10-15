@@ -9,6 +9,7 @@ import { Included } from "@/sections/included/Included";
 import { SiteTypes } from "@/sections/site-types/SiteTypes";
 import { Projects } from "@/sections/projects/Projects";
 import { Process } from "@/sections/process/Process";
+import { Pricing } from "@/sections/pricing/Pricing";
 import { Reviews } from "@/sections/reviews/Reviews";
 import { Footer } from "@/sections/footer/Footer";
 
@@ -30,6 +31,7 @@ export default function App() {
           <SiteTypes />
           <Projects />
           <Process />
+          <Pricing />
           <Reviews />
         </main>
         <Footer />
