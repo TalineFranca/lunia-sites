@@ -35,7 +35,7 @@ export function Hero() {
 
           <motion.h1
             id="hero-title"
-            className="mt-6 text-[2.6rem] font-light leading-[1.04] text-ink sm:text-6xl lg:text-[4.6rem]"
+            className="mt-6 text-[2.75rem] font-light leading-[1.02] text-ink sm:text-6xl lg:text-[5.25rem]"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.1, ease }}
