@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { Hero } from "@/sections/hero/Hero";
 import { WhySite } from "@/sections/why/WhySite";
+import { Included } from "@/sections/included/Included";
 import { Projects } from "@/sections/projects/Projects";
 import { Reviews } from "@/sections/reviews/Reviews";
 import { Footer } from "@/sections/footer/Footer";
@@ -23,6 +24,7 @@ export default function App() {
         <main id="conteudo">
           <Hero />
           <WhySite />
+          <Included />
           <Projects />
           <Reviews />
         </main>
