@@ -4,6 +4,7 @@ import { queryClient } from "@/lib/queryClient";
 import { Header } from "@/components/Header";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { Hero } from "@/sections/hero/Hero";
+import { WhySite } from "@/sections/why/WhySite";
 import { Projects } from "@/sections/projects/Projects";
 import { Reviews } from "@/sections/reviews/Reviews";
 import { Footer } from "@/sections/footer/Footer";
@@ -21,6 +22,7 @@ export default function App() {
         <Header />
         <main id="conteudo">
           <Hero />
+          <WhySite />
           <Projects />
           <Reviews />
         </main>
