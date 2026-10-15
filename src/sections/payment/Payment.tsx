@@ -1,6 +1,7 @@
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { paymentCopy, paymentMethods } from "@/data/payment";
+import { cn } from "@/lib/utils";
 import { PaymentIcon } from "./PaymentIcon";
 
 export function Payment() {
@@ -10,7 +11,7 @@ export function Payment() {
         <div className="border-t border-dashed border-ink/25 pt-16 md:pt-20">
           <SectionHeading id="pagamento" copy={paymentCopy} />
 
-          <ul className="mt-12 grid gap-4 sm:grid-cols-3 lg:gap-6">
+          <ul className={cn("mt-12 grid gap-4 lg:gap-6", paymentMethods.length > 1 ? "sm:grid-cols-3" : "max-w-md")}>
             {paymentMethods.map((method, i) => (
               <li key={method.title}>
                 <Reveal delay={i * 0.08} className="flex h-full items-start gap-5 rounded-[1.5rem] border border-ink/10 bg-cream p-6">

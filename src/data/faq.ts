@@ -46,6 +46,6 @@ export const faqItems: FaqItem[] = [
   {
     question: "Como funciona o pagamento?",
     answer:
-      "Você pode pagar por Pix, no cartão de crédito parcelado ou com 50% de entrada e 50% na entrega do site. A forma escolhida fica registrada na proposta.",
+      "O pagamento é feito por Pix. O valor e os dados para pagamento vão junto com a proposta, combinados antes de começar.",
   },
 ];
