@@ -15,7 +15,7 @@ export function Projects() {
           label="Projetos"
           title={
             <>
-              Projetos <Highlight>conceito</Highlight>
+              Projetos <Highlight>demonstrativos</Highlight>
             </>
           }
           intro="Sites desenvolvidos para explorar novas tecnologias."

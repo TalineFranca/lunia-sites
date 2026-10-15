@@ -1,7 +1,7 @@
 import type { Project } from "@/types/content";
 
 /**
- * Projetos exibidos na seção "Projetos conceito".
+ * Projetos exibidos na seção "Projetos demonstrativos".
  * São sites fictícios, feitos para estudo e teste de tecnologias (não são clientes reais).
  * Para trocar uma imagem, substitua o arquivo em public/projetos/ ou mude o caminho abaixo.
  */

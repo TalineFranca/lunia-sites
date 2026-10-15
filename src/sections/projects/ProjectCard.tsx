@@ -15,7 +15,7 @@ export function ProjectCard({ project }: { project: Project }) {
           className="aspect-[4/3] h-auto w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
         />
         <span className="absolute left-4 top-4 rounded-full border border-dashed border-ink/30 bg-cream/90 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-ink/75 backdrop-blur-sm">
-          Projeto conceito
+          Projeto demonstrativo
         </span>
       </div>
 
