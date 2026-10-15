@@ -1,35 +1,27 @@
 import type { Project } from "@/types/content";
 
 /**
- * Projetos exibidos na seção "Projetos".
- * Para trocar, edite os campos abaixo e coloque as imagens em public/projects/.
+ * Projetos exibidos na seção "Projetos conceito".
+ * São sites fictícios, feitos para estudo e teste de tecnologias (não são clientes reais).
+ * Para trocar uma imagem, substitua o arquivo em public/projetos/ ou mude o caminho abaixo.
  */
 export const projects: Project[] = [
   {
-    name: "Café Amora",
-    category: "Landing page",
+    name: "Sorveteria Arte Gelato",
     description:
-      "Página de lançamento para uma cafeteria de bairro, com cardápio, horários e pedidos direto pelo WhatsApp.",
-    image: "/projects/cafe-amora.svg",
-    imageAlt: "Prévia do site do Café Amora em tons de vinho e creme",
-    url: "",
+      "Projeto criado para testar o uso de um elemento 3D em um site. O sorvete reage ao mouse, à rolagem e ao celular.",
+    technologies: ["Three.js", "React Three Fiber", "Drei", "WebGL"],
+    image: "/projetos/arte-gelato.webp",
+    imageAlt: "Página inicial do site da Sorveteria Arte Gelato, com um sorvete 3D em fundo vinho",
+    url: "https://site-sorvete-interativo.vercel.app/",
   },
   {
-    name: "Studio Raiz",
-    category: "Site institucional",
+    name: "Pet shop Focinho Feliz",
     description:
-      "Site para um estúdio de pilates, com apresentação da equipe, modalidades e agendamento de aula experimental.",
-    image: "/projects/studio-raiz.svg",
-    imageAlt: "Prévia do site do Studio Raiz em tons de verde e areia",
-    url: "",
-  },
-  {
-    name: "Ateliê Flor de Sal",
-    category: "Site para celular",
-    description:
-      "Vitrine pensada para o celular para uma confeitaria artesanal, com catálogo de bolos e encomendas rápidas.",
-    image: "/projects/flor-de-sal.svg",
-    imageAlt: "Prévia do site do Ateliê Flor de Sal em tons de rosa e azul",
-    url: "",
+      "Projeto criado para testar as versões mais novas das ferramentas, com desenhos e texturas próprios.",
+    technologies: ["Next.js 15", "React 19", "Tailwind CSS v4", "Framer Motion"],
+    image: "/projetos/focinho-feliz.webp",
+    imageAlt: "Página inicial do site do Pet shop Focinho Feliz, com a ilustração de um cachorro",
+    url: "https://demo-petshop-ochre.vercel.app/",
   },
 ];

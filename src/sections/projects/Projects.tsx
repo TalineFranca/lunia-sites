@@ -15,16 +15,16 @@ export function Projects() {
           label="Projetos"
           title={
             <>
-              Alguns <Highlight>lugares</Highlight> que ganharam vida
+              Projetos <Highlight>conceito</Highlight>
             </>
           }
-          intro="Projetos de exemplo para mostrar o estilo da Lunia: cada negócio com a sua identidade, nenhum igual ao outro."
+          intro="Sites desenvolvidos para explorar novas tecnologias."
         />
 
-        <ul className="mt-16 grid gap-16 md:mt-20 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+        <ul className="mt-16 grid gap-16 md:mt-20 md:grid-cols-2 md:gap-12 lg:gap-20">
           {projects.map((project, i) => (
-            <li key={project.name} className={cn(i % 3 === 1 && "lg:translate-y-16")}>
-              <Reveal delay={(i % 3) * 0.12}>
+            <li key={project.name} className={cn(i % 2 === 1 && "md:translate-y-16")}>
+              <Reveal delay={(i % 2) * 0.12} className="h-full">
                 <ProjectCard project={project} />
               </Reveal>
             </li>

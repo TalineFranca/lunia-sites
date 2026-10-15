@@ -1,12 +1,12 @@
 export interface Project {
   name: string;
-  category: string;
   description: string;
-  /** Caminho a partir da pasta public/, ex.: "/projects/meu-projeto.jpg" */
+  /** Tecnologias usadas, exibidas como etiquetas no card */
+  technologies: string[];
+  /** Caminho a partir da pasta public/, ex.: "/projetos/meu-projeto.webp" */
   image: string;
   imageAlt: string;
-  /** Deixe vazio enquanto o projeto não estiver no ar */
-  url?: string;
+  url: string;
 }
 
 export interface Technology {

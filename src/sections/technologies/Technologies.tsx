@@ -9,7 +9,7 @@ export function Technologies() {
       <div className="container grid gap-14 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
         <SectionHeading
           id="tecnologias"
-          index="03"
+          index="04"
           label="Tecnologias"
           className="lg:sticky lg:top-28 lg:self-start"
           title={

@@ -16,7 +16,7 @@ export function Contact() {
       <div className="container relative grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-end lg:gap-24">
         <SectionHeading
           id="contato"
-          index="05"
+          index="06"
           label="Contato"
           tone="light"
           title={
