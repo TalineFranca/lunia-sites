@@ -5,7 +5,6 @@ import { projects, projectsCopy, projectTypes } from "@/data/projects";
 import { cn } from "@/lib/utils";
 import type { ProjectType } from "@/types/content";
 import { ProjectCard } from "./ProjectCard";
-import { ProjectTypesExplainer } from "./ProjectTypesExplainer";
 
 type Filter = "todos" | ProjectType;
 
@@ -21,11 +20,7 @@ export function Projects() {
       <div className="container">
         <SectionHeading id="projetos" copy={projectsCopy} />
 
-        <div className="mt-12 md:mt-16">
-          <ProjectTypesExplainer />
-        </div>
-
-        <Tabs defaultValue="todos" className="mt-14 md:mt-16">
+        <Tabs defaultValue="todos" className="mt-12 md:mt-16">
           <TabsList aria-label="Filtrar projetos por tipo">
             {filters.map((filter) => (
               <TabsTrigger key={filter.value} value={filter.value}>

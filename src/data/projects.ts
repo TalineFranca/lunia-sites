@@ -10,20 +10,10 @@ export const projectsCopy: SectionCopy = {
 /** Texto da etiqueta exibida em cada card */
 export const projectTag = "Projeto demonstrativo";
 
-/** Nome e explicação de cada tipo, usados nas etiquetas, no bloco explicativo e no filtro */
-export const projectTypes: Record<ProjectType, { label: string; filterLabel: string; title: string; text: string }> = {
-  landing: {
-    label: "Landing page",
-    filterLabel: "Landing pages",
-    title: "Uma página. Um objetivo.",
-    text: "Leva a pessoa direto para uma ação: chamar no WhatsApp, agendar ou comprar.",
-  },
-  site: {
-    label: "Site",
-    filterLabel: "Sites",
-    title: "Várias páginas. Mais espaço.",
-    text: "Cada assunto na sua página: serviços, sobre, portfólio e contato.",
-  },
+/** Nome de cada tipo: `label` aparece na etiqueta do card e `filterLabel`, no filtro */
+export const projectTypes: Record<ProjectType, { label: string; filterLabel: string }> = {
+  landing: { label: "Landing page", filterLabel: "Landing pages" },
+  site: { label: "Site", filterLabel: "Sites" },
 };
 
 /**
