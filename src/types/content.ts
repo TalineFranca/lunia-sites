@@ -17,8 +17,14 @@ export interface SectionCopy {
   intro?: string;
 }
 
+/** "landing" = uma página só; "site" = várias páginas */
+export type ProjectType = "landing" | "site";
+
 export interface Project {
   name: string;
+  type: ProjectType;
+  /** Páginas do site (só para type "site"); o card mostra a quantidade */
+  pages?: string[];
   description: string;
   /** Tecnologias usadas, exibidas como etiquetas no card */
   technologies: string[];

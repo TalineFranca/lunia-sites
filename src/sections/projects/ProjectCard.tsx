@@ -2,8 +2,11 @@ import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { projectTag } from "@/data/projects";
 import type { Project } from "@/types/content";
+import { ProjectTypeBadge } from "./ProjectTypeBadge";
 
 export function ProjectCard({ project }: { project: Project }) {
+  const pageCount = project.type === "site" ? project.pages?.length : undefined;
+
   return (
     <article className="group flex h-full flex-col">
       <div className="relative overflow-hidden rounded-[1.75rem] border border-ink/15 bg-lavender/40">
@@ -21,16 +24,26 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="mt-6 flex flex-1 flex-col">
-        <h3 className="text-3xl font-normal">{project.name}</h3>
+        <div className="flex flex-wrap items-center gap-3">
+          <ProjectTypeBadge type={project.type} />
+          {pageCount ? (
+            <span className="text-sm font-semibold text-ink/70" title={project.pages?.join(", ")}>
+              {pageCount} {pageCount === 1 ? "página" : "páginas"}
+            </span>
+          ) : null}
+        </div>
+        <h3 className="mt-4 text-3xl font-normal">{project.name}</h3>
         <p className="mt-3 leading-relaxed text-ink/75">{project.description}</p>
 
-        <ul aria-label="Tecnologias usadas" className="mt-5 flex flex-wrap gap-2">
-          {project.technologies.map((tech) => (
-            <li key={tech} className="rounded-full bg-lavender/60 px-3 py-1 text-xs font-semibold text-ink/80">
-              {tech}
-            </li>
-          ))}
-        </ul>
+        {project.technologies.length > 0 && (
+          <ul aria-label="Tecnologias usadas" className="mt-5 flex flex-wrap gap-2">
+            {project.technologies.map((tech) => (
+              <li key={tech} className="rounded-full bg-lavender/60 px-3 py-1 text-xs font-semibold text-ink/80">
+                {tech}
+              </li>
+            ))}
+          </ul>
+        )}
 
         <div className="mt-auto pt-7">
           <Button asChild variant="outline">
