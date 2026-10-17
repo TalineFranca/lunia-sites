@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export function SiteTypes() {
   return (
-    <section aria-labelledby="tipos" className="py-24 md:py-36">
+    <section aria-labelledby="tipos" className="pb-12 pt-24 md:pb-16 md:pt-36">
       <div className="container">
         <SectionHeading id="tipos" copy={siteTypesCopy} />
 

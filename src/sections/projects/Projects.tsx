@@ -16,7 +16,7 @@ const filters: { value: Filter; label: string }[] = [
 
 export function Projects() {
   return (
-    <section aria-labelledby="projetos" className="py-24 md:py-36">
+    <section aria-labelledby="projetos" className="pb-24 pt-12 md:pb-36 md:pt-16">
       <div className="container">
         <SectionHeading id="projetos" copy={projectsCopy} />
 
