@@ -48,7 +48,7 @@ export const projects: Project[] = [
     pages: ["Início", "Sobre", "Produtos", "Serviços", "Conteúdos", "Contato"],
     description:
       "Site institucional para revenda de insumos agrícolas, com produtos, serviços, conteúdos técnicos e contato direto pelo WhatsApp.",
-    technologies: [],
+    technologies: ["Next.js 16", "React 19", "Tailwind CSS v4", "Framer Motion"],
     image: "/projects/terra-viva.png",
     imageAlt: "Página inicial do site da Terra Viva Agro, revenda de insumos agrícolas",
     url: "https://demo-terra-viva-agro-steel.vercel.app/",
