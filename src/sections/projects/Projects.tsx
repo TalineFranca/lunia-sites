@@ -3,12 +3,17 @@ import { Reveal } from "@/components/Reveal";
 import { projects, projectsCopy } from "@/data/projects";
 import { cn } from "@/lib/utils";
 import { ProjectCard } from "./ProjectCard";
+import { ProjectTypesExplainer } from "./ProjectTypesExplainer";
 
 export function Projects() {
   return (
     <section aria-labelledby="projetos" className="py-24 md:py-36">
       <div className="container">
         <SectionHeading id="projetos" copy={projectsCopy} />
+
+        <div className="mt-12 md:mt-16">
+          <ProjectTypesExplainer />
+        </div>
 
         <ul className="mt-16 grid gap-16 md:mt-20 md:grid-cols-2 md:gap-12 lg:gap-20">
           {projects.map((project, i) => (
