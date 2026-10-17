@@ -2,11 +2,6 @@ import { projectTypes } from "@/data/projects";
 import { cn } from "@/lib/utils";
 import type { ProjectType } from "@/types/content";
 
-const styles: Record<ProjectType, string> = {
-  landing: "bg-[#DAD2F8] text-[#2A1E78]",
-  site: "bg-[#1C1A26] text-[#F4EFE8]",
-};
-
 /** Ícone de uma página (landing) ou de páginas empilhadas (site). */
 function TypeIcon({ type }: { type: ProjectType }) {
   const line = { fill: "none", stroke: "currentColor", strokeWidth: 1.5, strokeLinejoin: "round" as const };
@@ -28,13 +23,12 @@ function TypeIcon({ type }: { type: ProjectType }) {
   );
 }
 
-/** Etiqueta com o tipo do projeto: tem texto, então não depende só da cor. */
+/** Etiqueta com o tipo do projeto: a diferença está no texto e no ícone, não na cor. */
 export function ProjectTypeBadge({ type, className }: { type: ProjectType; className?: string }) {
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em]",
-        styles[type],
+        "inline-flex items-center gap-1.5 rounded-full bg-lavender/60 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-ink/80",
         className,
       )}
     >
